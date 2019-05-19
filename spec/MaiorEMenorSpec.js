@@ -16,4 +16,12 @@ describe("Maior e Menor teste", function(){
 		expect(algoritmo.pegaMaior()).toEqual(15);
 		expect(algoritmo.pegaMenor()).toEqual(12);
 	});
+
+	it("Deve testar números em ordem crescente", function(){
+		var algoritmo = new MaiorEMenor();
+		algoritmo.encontra([7,8,9,10]);
+
+		expect(algoritmo.pegaMaior()).toEqual(10);
+		expect(algoritmo.pegaMenor()).toEqual(7);
+	});
 });
