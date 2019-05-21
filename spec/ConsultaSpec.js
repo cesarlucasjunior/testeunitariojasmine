@@ -18,5 +18,10 @@ describe("Testando consulta", function(){
 
         expect(consulta.preco()).toEqual(100);
     });
+    
+    it("Consulta procedimentos especiais e particular", function(){
+        var consulta = new Consulta(new Paciente(), ['raiox', 'gesso'], true, false);
 
+        expect(consulta.preco()).toEqual(134);
+    });
 });
