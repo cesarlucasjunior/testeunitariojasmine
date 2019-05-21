@@ -6,4 +6,10 @@ describe("Testando consulta", function(){
 
         expect(precoFinal).toEqual(0);
     });
+    
+    it("Consulta procedimento comum", function(){
+        var consulta = new Consulta(new Paciente(), ['procA', 'procB'], false, false);
+
+        expect(consulta.preco()).toEqual(50);
+    });
 });
