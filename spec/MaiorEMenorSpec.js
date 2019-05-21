@@ -24,4 +24,12 @@ describe("Maior e Menor teste", function(){
 		expect(algoritmo.pegaMaior()).toEqual(10);
 		expect(algoritmo.pegaMenor()).toEqual(7);
 	});
+
+	it("Deve testar uma lista com apenas um registro", function(){
+		var algoritmo = new MaiorEMenor();
+		algoritmo.encontra([3]);
+
+		expect(algoritmo.pegaMaior()).toEqual(3);
+		expect(algoritmo.pegaMenor()).toEqual(3);
+	});
 });
