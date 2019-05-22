@@ -31,11 +31,23 @@ describe("Testando consulta", function(){
     });
 
     describe("Consulta procedimento especial", function(){
-                
+
         it("Consulta procedimentos especiais e particular", function(){
             var consulta = new Consulta(paciente, ['raiox', 'gesso'], true, false);
 
             expect(consulta.preco()).toEqual(134);
+        });
+    });
+
+    describe("TDD", function(){
+        it("Realizar agendamento de retorno", function(){
+            //Ambiente
+            var agendamento = new Agendamento();
+            var consulta = new Consulta(paciente, [], false, false, new Date(2019, 04, 03));
+            //Ação
+            var retornoConsulta = agendamento.agendamentoRetorno(consulta);
+            //Teste
+            expect(retornoConsulta.getData().toString()).toEqual(new Date(2019, 04, 23).toString());
         });
     });
 });
