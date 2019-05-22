@@ -49,5 +49,15 @@ describe("Testando consulta", function(){
             //Teste
             expect(retornoConsulta.getData().toString()).toEqual(new Date(2019, 04, 23).toString());
         });
+
+        it("Deve pular os finais de semana", function(){
+            //Ambiente
+            var agendamento = new Agendamento();
+            var consulta = new Consulta(paciente, [], false, false, new Date(2019, 04, 06));
+            //Ação
+            var retornoConsultaNoFds = agendamento.agendamentoRetorno(consulta);
+            //Teste
+            expect(retornoConsultaNoFds.getData().toString()).toEqual(new Date(2019, 04, 27).toString());
+        });
     });
 });
