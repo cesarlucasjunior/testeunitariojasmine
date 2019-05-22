@@ -60,4 +60,16 @@ describe("Testando consulta", function(){
             expect(retornoConsultaNoFds.getData().toString()).toEqual(new Date(2019, 04, 27).toString());
         });
     });
+
+    //describe("Testando números romanos", function(){
+
+      //  it("Números romanos para números naturais", function(){
+            //Ambiente
+      //      var numerosRomanos = new NumerosRomanos();
+            //Ação
+      //      var numerosNaturais = numerosRomanos.passarParaNatural(["I", "IV", "XVI"]);
+            //Teste
+      //      expect(numerosNaturais.getRetornoNatural()).toEqual(1, 4, 16);
+       // });
+    //});
 });
